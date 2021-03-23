@@ -1,7 +1,7 @@
 const express = require('express')
 const App = express()
 
-App.listen(5000)
+App.listen(process.env.PORT || 5000)
 console.log('fire')
 
 App.get("/", (req, res) =>
