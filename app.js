@@ -1,9 +1,11 @@
 const express = require('express')
-const app = express()
-const port = 3000
+const App = express()
 
-app.get('/', (req, res) => {
-  res.send({
+App.listen(5000)
+console.log('fire')
+
+App.get("/", (req, res) =>
+  res.json({
         0: {
             color: 'red',
             name: 'Urgent',
@@ -15,10 +17,7 @@ app.get('/', (req, res) => {
         2: {
             color: 'blue',
             name: 'Trivial',
-        },
+        },  
     })
-})
+)
 
-app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
-})
