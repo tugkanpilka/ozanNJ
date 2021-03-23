@@ -1,10 +1,13 @@
 const express = require('express')
-const App = express()
+const app = express()
+const cors = require('cors')
 
-App.listen(process.env.PORT || 5000)
+app.use(cors())
+
+app.listen(process.env.PORT || 5000)
 console.log('fire')
 
-App.get("/priorities", (req, res) =>
+app.get("/priorities", (req, res) =>
   res.json({
         0: {
             color: 'red',
