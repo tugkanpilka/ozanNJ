@@ -4,7 +4,7 @@ const App = express()
 App.listen(process.env.PORT || 5000)
 console.log('fire')
 
-App.get("/", (req, res) =>
+App.get("/priorities", (req, res) =>
   res.json({
         0: {
             color: 'red',
