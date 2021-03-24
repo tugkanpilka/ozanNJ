@@ -5,7 +5,7 @@ const cors = require('cors')
 app.use(cors())
 
 app.listen(process.env.PORT || 5000)
-console.log('fire')
+console.log('Ozan Node.js API fired.')
 
 app.get("/priorities", (req, res) =>
   res.json({
